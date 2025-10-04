@@ -10,28 +10,112 @@ export default function Products() {
       description: t('spaghettiDesc'),
       icon: Wheat,
       color: 'from-yellow-400 to-yellow-600',
-      image: 'bg-gradient-to-br from-yellow-100 to-yellow-200'
+      image: '/images/spaghetti.jpg'
     },
     {
       name: t('vermicelli'),
       description: t('vermicelliDesc'),
       icon: Package,
       color: 'from-orange-400 to-orange-600',
-      image: 'bg-gradient-to-br from-orange-100 to-orange-200'
+      image: '/images/vermicelli.jpg'
     },
     {
       name: t('penne'),
       description: t('penneDesc'),
       icon: Wheat,
       color: 'from-green-400 to-green-600',
-      image: 'bg-gradient-to-br from-green-100 to-green-200'
+      image: '/images/penne.jpg'
     },
     {
       name: t('fusilli'),
       description: t('fusilliDesc'),
       icon: Package,
       color: 'from-blue-400 to-blue-600',
-      image: 'bg-gradient-to-br from-blue-100 to-blue-200'
+      image: '/images/fusilli.jpg'
+    },
+    {
+      name: t('rigatoni'),
+      description: t('rigatoniDesc'),
+      icon: Wheat,
+      color: 'from-yellow-500 to-yellow-700',
+      image: '/images/rigatoni.jpg'
+    },
+    {
+      name: t('conchiglie'),
+      description: t('conchiglieDesc'),
+      icon: Package,
+      color: 'from-orange-500 to-orange-700',
+      image: '/images/conchiglie.jpg'
+    },
+    {
+      name: t('rotelle'),
+      description: t('rotelleDesc'),
+      icon: Wheat,
+      color: 'from-yellow-600 to-yellow-800',
+      image: '/images/rotelle.jpg'
+    },
+    {
+      name: t('tagliatelle'),
+      description: t('tagliatelleDesc'),
+      icon: Package,
+      color: 'from-yellow-400 to-yellow-600',
+      image: '/images/tagliatelle.jpg'
+    },
+    {
+      name: t('macaroni'),
+      description: t('macaroniDesc'),
+      icon: Wheat,
+      color: 'from-orange-400 to-orange-600',
+      image: '/images/macaroni.jpg'
+    },
+    {
+      name: t('farfalle'),
+      description: t('farfalleDesc'),
+      icon: Package,
+      color: 'from-purple-400 to-purple-600',
+      image: '/images/farfalle.jpg'
+    },
+    {
+      name: t('ditalini'),
+      description: t('ditaliniDesc'),
+      icon: Wheat,
+      color: 'from-green-500 to-green-700',
+      image: '/images/ditalini.jpg'
+    },
+    {
+      name: t('orzo'),
+      description: t('orzoDesc'),
+      icon: Package,
+      color: 'from-yellow-500 to-yellow-700',
+      image: '/images/orzo.jpg'
+    },
+    {
+      name: t('tortellini'),
+      description: t('tortelliniDesc'),
+      icon: Wheat,
+      color: 'from-red-400 to-red-600',
+      image: '/images/tortellini.jpg'
+    },
+    {
+      name: t('fettuccine'),
+      description: t('fettuccineDesc'),
+      icon: Package,
+      color: 'from-yellow-400 to-yellow-600',
+      image: '/images/fettuccine.jpg'
+    },
+    {
+      name: t('lasagna'),
+      description: t('lasagnaDesc'),
+      icon: Wheat,
+      color: 'from-orange-500 to-orange-700',
+      image: '/images/lasagna.jpg'
+    },
+    {
+      name: t('ravioli'),
+      description: t('ravioliDesc'),
+      icon: Package,
+      color: 'from-red-500 to-red-700',
+      image: '/images/ravioli.jpg'
     }
   ];
 
@@ -46,16 +130,18 @@ export default function Products() {
           <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-yellow-500 mx-auto rounded-full mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
           {products.map((product, index) => (
             <div
               key={index}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 overflow-hidden border border-gray-100"
             >
-              <div className={`h-48 ${product.image} flex items-center justify-center relative overflow-hidden`}>
-                <div className={`w-20 h-20 bg-gradient-to-br ${product.color} rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                  <product.icon className="w-10 h-10 text-white" />
-                </div>
+              <div className="h-48 bg-gray-50 flex items-center justify-center relative overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute top-4 right-4">
                   <div className="bg-white rounded-full p-2 shadow-md">
                     <Award className="w-5 h-5 text-yellow-500" />

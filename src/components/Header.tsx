@@ -16,7 +16,6 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     { key: 'about', label: t('about') },
     { key: 'products', label: t('products') },
     { key: 'greenEnergy', label: t('greenEnergy') },
-    { key: 'news', label: t('news') },
     { key: 'contact', label: t('contact') }
   ];
 
@@ -28,11 +27,15 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-xl">NS</span>
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden transform group-hover:scale-105 transition-transform">
+              <img 
+                src="/images/logo1.jpeg" 
+                alt="Narpay Spaghetti Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Narpay Spaghetti</h1>
+              <h1 className="text-lg sm:text-xl font-bold text-gray-900">Narpay Spaghetti</h1>
               <p className="text-xs text-green-600">Since 2002</p>
             </div>
           </div>

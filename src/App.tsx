@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import GreenEnergy from './pages/GreenEnergy';
-import News from './pages/News';
 import Contact from './pages/Contact';
 
 function App() {
@@ -22,8 +21,6 @@ function App() {
         return <Products />;
       case 'greenEnergy':
         return <GreenEnergy />;
-      case 'news':
-        return <News />;
       case 'contact':
         return <Contact />;
       default:

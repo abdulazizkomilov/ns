@@ -34,8 +34,8 @@ export default function Contact() {
           <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-yellow-500 mx-auto rounded-full mt-6"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="space-y-6">
+        <div className="space-y-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contactInfo')}</h2>
 
@@ -83,51 +83,22 @@ export default function Contact() {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
-                <input
-                  type="tel"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
-                  placeholder="+998 XX XXX XX XX"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all resize-none"
-                  placeholder="Your message..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
-              >
-                Send Message
-              </button>
-            </form>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('ourLocation')}</h3>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.108460122947!2d65.9030942!3d39.9224786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4dfffa0dd2ac71%3A0x2fafad57f609277e!2snarpay!5e1!3m2!1sen!2s!4v1654963352934!5m2!1sen!2s" 
+                width="100%" 
+                height="400" 
+                style={{border: 0}} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Narpay Spaghetti Location"
+              ></iframe>
+            </div>
+            <p className="text-gray-600 mt-4 text-center">
+              {t('findUsEasily')}
+            </p>
           </div>
         </div>
 
